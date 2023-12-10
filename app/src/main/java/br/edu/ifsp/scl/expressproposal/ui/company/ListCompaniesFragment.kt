@@ -1,4 +1,4 @@
-package br.edu.ifsp.scl.expressproposal.ui
+package br.edu.ifsp.scl.expressproposal.ui.company
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,10 +9,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.edu.ifsp.scl.expressproposal.R
-import br.edu.ifsp.scl.expressproposal.adapter.CompanyAdapter
-import br.edu.ifsp.scl.expressproposal.data.Company
+import br.edu.ifsp.scl.expressproposal.adapter.company.CompanyAdapter
+import br.edu.ifsp.scl.expressproposal.data.company.Company
 import br.edu.ifsp.scl.expressproposal.databinding.FragmentListCompaniesBinding
-import br.edu.ifsp.scl.expressproposal.viewmodel.CompanyViewModel
+import br.edu.ifsp.scl.expressproposal.viewmodel.company.CompanyViewModel
 
 class ListCompaniesFragment : Fragment() {
         private var _binding: FragmentListCompaniesBinding? = null

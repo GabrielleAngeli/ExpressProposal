@@ -13,6 +13,11 @@
         android:theme="@style/Theme.ExpressProposal"
         tools:targetApi="31">
         <activity
+            android:name=".ListItemsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_list_items"
+            android:theme="@style/Theme.ExpressProposal" />
+        <activity
             android:name=".ListCompaniesActivity"
             android:exported="false" />
         <activity

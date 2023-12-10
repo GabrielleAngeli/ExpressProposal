@@ -1,38 +1,38 @@
-package br.edu.ifsp.scl.expressproposal.ui
+package br.edu.ifsp.scl.expressproposal.ui.item
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import br.edu.ifsp.scl.expressproposal.R
-import br.edu.ifsp.scl.expressproposal.data.Company
-import br.edu.ifsp.scl.expressproposal.databinding.FragmentRegistrationCompanyBinding
-import br.edu.ifsp.scl.expressproposal.viewmodel.CompanyViewModel
+import br.edu.ifsp.scl.expressproposal.data.item.Item
+import br.edu.ifsp.scl.expressproposal.databinding.FragmentRegistrationItemBinding
+import br.edu.ifsp.scl.expressproposal.viewmodel.item.ItemViewModel
 import com.google.android.material.snackbar.Snackbar
 
-class RegistrationCompanyFragment : Fragment() {
-
-    private var _binding: FragmentRegistrationCompanyBinding? = null
+class RegistrationItemFragment : Fragment() {
+    private var _binding: FragmentRegistrationItemBinding? = null
     private val binding get() = _binding!!
-    lateinit var viewModel: CompanyViewModel
+    lateinit var viewModel: ItemViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(CompanyViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(ItemViewModel::class.java)
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentRegistrationCompanyBinding.inflate(inflater, container, false)
+    ): View? {
+        _binding = FragmentRegistrationItemBinding.inflate(inflater, container, false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,14 +47,12 @@ class RegistrationCompanyFragment : Fragment() {
                 // Handle the menu selection
                 return when (menuItem.itemId) {
                     R.id.action_save -> {
-                        val name = binding.commonCompanyLayout.editTextNome.text.toString()
-                        val email = binding.commonCompanyLayout.editTextEmail.text.toString()
-                        val cnpj = binding.commonCompanyLayout.editTextCnpj.text.toString()
-                        val phone = binding.commonCompanyLayout.editTextPhone.text.toString()
-
-                        val company = Company(id = 0, name = name, phone = phone, email = email, cnpj =cnpj)
-                        viewModel.insert(company)
-                        Snackbar.make(binding.root, "Empresa inserida", Snackbar.LENGTH_SHORT).show()
+                        val type = binding.commonLayout.editTextType.text.toString()
+                        val value = binding.commonLayout.editTextValue.text.toString()
+                        val description = binding.commonLayout.editTextDescription.text.toString()
+                        val item = Item(id = 0, type = type, value = value, description = description)
+                        viewModel.insert(item)
+                        Snackbar.make(binding.root, "Item inserido", Snackbar.LENGTH_SHORT).show()
                         findNavController().popBackStack()
                         true
                     }
@@ -63,4 +61,5 @@ class RegistrationCompanyFragment : Fragment() {
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
     }
+
 }

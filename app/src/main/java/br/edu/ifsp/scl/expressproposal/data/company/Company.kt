@@ -1,4 +1,4 @@
-package br.edu.ifsp.scl.expressproposal.data
+package br.edu.ifsp.scl.expressproposal.data.company
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

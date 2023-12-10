@@ -1,9 +1,9 @@
-package br.edu.ifsp.scl.expressproposal.adapter
+package br.edu.ifsp.scl.expressproposal.adapter.company
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import br.edu.ifsp.scl.expressproposal.data.Company
+import br.edu.ifsp.scl.expressproposal.data.company.Company
 import br.edu.ifsp.scl.expressproposal.databinding.CompanyCellBinding
 
 class CompanyAdapter() :

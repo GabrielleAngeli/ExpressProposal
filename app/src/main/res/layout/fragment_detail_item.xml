@@ -3,10 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.company.DetailFragment">
+    tools:context=".ui.item.DetailItemFragment">
 
-    <include
-        android:id="@+id/common_layout"
-        layout="@layout/common_company_layout" />
+    <include layout="@layout/common_item_layout"
+        android:id="@+id/common_layout"/>
 
 </FrameLayout>

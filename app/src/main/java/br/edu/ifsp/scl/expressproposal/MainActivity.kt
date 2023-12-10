@@ -25,6 +25,13 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ListCompaniesActivity::class.java)
             startActivity(intent)
         }
+
+        val btnNavigateToListItems: Button = findViewById(R.id.btnNavigateToListItems)
+        btnNavigateToListItems.setOnClickListener {
+            // Navegar para a tela de listagem
+            val intent = Intent(this, ListItemsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

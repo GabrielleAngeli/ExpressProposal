@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/items_nav"
+    app:startDestination="@id/listItemsFragment">
+
+    <fragment
+        android:id="@+id/listItemsFragment"
+        android:name="br.edu.ifsp.scl.expressproposal.ui.item.ListItemsFragment"
+        android:label="Lista de itens"
+        tools:layout="@layout/fragment_list_items" >
+        <action
+            android:id="@+id/action_listItensFragment_to_registrationItemFragment"
+            app:destination="@id/registrationItemFragment" />
+        <action
+            android:id="@+id/action_listItemsFragment_to_detailItemFragment"
+            app:destination="@id/detailItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationItemFragment"
+        android:name="br.edu.ifsp.scl.expressproposal.ui.item.RegistrationItemFragment"
+        android:label="Novo item"
+        tools:layout="@layout/fragment_registration_item" />
+    <fragment
+        android:id="@+id/detailItemFragment"
+        android:name="br.edu.ifsp.scl.expressproposal.ui.item.DetailItemFragment"
+        android:label="Detalhes do item"
+        tools:layout="@layout/fragment_detail_item" />
+</navigation>

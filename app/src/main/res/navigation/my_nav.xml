@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listCompaniesFragment"
-        android:name="br.edu.ifsp.scl.expressproposal.ui.ListCompaniesFragment"
+        android:name="br.edu.ifsp.scl.expressproposal.ui.company.ListCompaniesFragment"
         android:label="Lista de empresas"
         tools:layout="@layout/fragment_list_companies">
         <action
@@ -20,12 +20,12 @@
 
     <fragment
         android:id="@+id/RegistrationComapniesFragment"
-        android:name="br.edu.ifsp.scl.expressproposal.ui.RegistrationCompanyFragment"
+        android:name="br.edu.ifsp.scl.expressproposal.ui.company.RegistrationCompanyFragment"
         android:label="Nova empresa"
         tools:layout="@layout/fragment_registration_company" />
     <fragment
         android:id="@+id/detailFragment"
-        android:name="br.edu.ifsp.scl.expressproposal.ui.DetailFragment"
+        android:name="br.edu.ifsp.scl.expressproposal.ui.company.DetailFragment"
         android:label="Detalhes"
         tools:layout="@layout/fragment_detail" />
 </navigation>

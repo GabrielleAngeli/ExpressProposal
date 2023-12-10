@@ -1,4 +1,4 @@
-package br.edu.ifsp.scl.expressproposal.ui
+package br.edu.ifsp.scl.expressproposal.ui.company
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,9 +15,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import br.edu.ifsp.scl.expressproposal.R
-import br.edu.ifsp.scl.expressproposal.data.Company
+import br.edu.ifsp.scl.expressproposal.data.company.Company
 import br.edu.ifsp.scl.expressproposal.databinding.FragmentDetailBinding
-import br.edu.ifsp.scl.expressproposal.viewmodel.CompanyViewModel
+import br.edu.ifsp.scl.expressproposal.viewmodel.company.CompanyViewModel
 import com.google.android.material.snackbar.Snackbar
 
 
