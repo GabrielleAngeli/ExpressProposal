@@ -38,6 +38,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         />
 
+    <Button
+        android:id="@+id/btnGenerateProposal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gerar Porposta"
+        android:onClick="navigateToList"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnNavigateToList"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
 <!--    <androidx.fragment.app.FragmentContainerView-->
 <!--        android:id="@+id/fragmentContainerView"-->
 <!--        android:name="androidx.navigation.fragment.NavHostFragment"-->

@@ -32,6 +32,13 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ListItemsActivity::class.java)
             startActivity(intent)
         }
+
+        val btnGenerateProposal: Button = findViewById(R.id.btnGenerateProposal)
+        btnGenerateProposal.setOnClickListener {
+            // Navegar para a tela de listagem
+            val intent = Intent(this, ProposalActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }
